@@ -1615,3 +1615,324 @@ button:hover{
     color:#8a8aa0;
 
 }
+
+/*=============================================
+  BOOTSTRAP RESPONSIVE LAYOUT
+==============================================*/
+
+/* Bootstrap handles the columns; these rules keep the existing card design. */
+.projects-grid,
+.portfolio-grid{
+    display:flex;
+    gap:0;
+}
+
+.trusted-cards{
+    gap:0;
+}
+
+.trusted-cards .review-card{
+    width:100%;
+}
+
+.contact-container{
+    gap:0;
+}
+
+.navbar-toggler{
+    border-color:#d0912a;
+}
+
+.navbar-toggler:focus{
+    box-shadow:0 0 0 .2rem rgba(208,145,42,.25);
+}
+
+@media (max-width: 991.98px){
+    .navbar{
+        width:90%;
+        padding:18px 0;
+    }
+
+    .navbar-collapse{
+        padding-top:20px;
+    }
+
+    .nav-links{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:16px;
+        padding-bottom:22px;
+    }
+
+    .nav-links .active::after{
+        bottom:-5px;
+    }
+
+    .right-side{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:20px;
+        padding-bottom:8px;
+    }
+
+    .hero,
+    .about,
+    .trusted,
+    .projects,
+    .portfolio,
+    .contact{
+        padding:70px 0;
+    }
+
+    .hero-container,
+    .about-container{
+        gap:0;
+    }
+
+    .hero-image{
+        justify-content:flex-start;
+    }
+
+    .hero-image img{
+        max-width:650px;
+    }
+
+    .about-image img{
+        max-width:650px;
+    }
+
+    .contact-title{
+        font-size:48px;
+    }
+}
+
+/* Consistent responsive spacing for sections that contain images and text. */
+@media (max-width: 991.98px){
+    .hero,
+    .about,
+    .trusted,
+    .projects,
+    .portfolio,
+    .contact{
+        padding:60px 0;
+    }
+
+    .hero-container,
+    .about-container{
+        --bs-gutter-y:0;
+        gap:28px;
+    }
+
+    .hero-image img,
+    .about-image img{
+        margin-bottom:0;
+    }
+}
+
+@media (max-width: 767.98px){
+    .hero{
+        padding:32px 0 44px;
+    }
+
+    .about,
+    .trusted,
+    .projects,
+    .portfolio,
+    .contact{
+        padding:44px 0;
+    }
+
+    .hero-container,
+    .about-container{
+        gap:22px;
+    }
+
+    .hero-content,
+    .about-content{
+        padding-top:0;
+    }
+
+    .portfolio-content{
+        padding:22px;
+    }
+}
+
+@media (max-width: 767.98px){
+    .hero,
+    .about,
+    .trusted,
+    .projects,
+    .portfolio,
+    .contact{
+        padding:55px 0;
+    }
+
+    .hero-badge{
+        align-items:flex-start;
+        flex-wrap:wrap;
+        gap:6px 12px;
+        margin-bottom:25px;
+        padding:10px 16px;
+    }
+
+    .hero-title{
+        font-size:52px;
+    }
+
+    .hero-subtitle{
+        font-size:26px;
+    }
+
+    .hero-description,
+    .about-content p{
+        font-size:16px;
+        line-height:1.75;
+    }
+
+    .hero-buttons,
+    .about-buttons,
+    .newsletter form{
+        align-items:stretch;
+        flex-direction:column;
+    }
+
+    .hero-btn,
+    .about-btn,
+    .portfolio-btn{
+        text-align:center;
+    }
+
+    .about-title,
+    .projects-title,
+    .portfolio-title,
+    .trusted-title{
+        font-size:36px;
+    }
+
+    .contact-title{
+        font-size:38px;
+    }
+
+    .contact-form,
+    .project-card,
+    .review-card,
+    .portfolio-content{
+        padding:25px;
+    }
+
+    .footer{
+        padding-top:55px;
+    }
+}
+
+/* Hero section: single-column mobile layout only */
+@media (max-width: 767.98px){
+    .hero{
+        padding:42px 0 56px;
+    }
+
+    .hero-container,
+    .about-container{
+        width:90%;
+        flex-direction:column;
+    }
+
+    .hero-content,
+    .hero-image,
+    .about-content,
+    .about-image{
+        flex:0 0 100%;
+        width:100%;
+        min-width:0;
+    }
+
+    /* The hero image is first on mobile; the About image is already first in the HTML. */
+    .hero-image{
+        order:-1;
+    }
+
+    .hero-badge{
+        flex-wrap:nowrap;
+        gap:7px;
+        padding:10px 12px;
+        font-size:11px;
+        white-space:nowrap;
+    }
+
+    .hero-title{
+        font-size:48px;
+        line-height:1.1;
+        margin-bottom:14px;
+    }
+
+    .hero-subtitle{
+        font-size:23px;
+        line-height:1.35;
+        overflow-wrap:anywhere;
+    }
+
+    .hero-description{
+        margin-bottom:28px;
+    }
+
+    .hero-image img,
+    .about-image img{
+        display:block;
+        width:100%;
+        max-width:100%;
+        height:auto;
+        max-height:320px;
+        object-fit:cover;
+    }
+
+    .hero-image img{
+        margin-bottom:8px;
+    }
+
+    .portfolio-image img{
+        height:220px;
+        object-fit:cover;
+    }
+}
+
+/* Tablet: keep image-and-text sections stacked until the laptop breakpoint. */
+@media (min-width: 768px) and (max-width: 991.98px){
+    .hero-container,
+    .about-container{
+        flex-direction:column;
+    }
+
+    .hero-content,
+    .hero-image,
+    .about-content,
+    .about-image{
+        flex:0 0 100%;
+        width:100%;
+    }
+
+    .hero-image{
+        order:-1;
+    }
+
+    .hero-image img,
+    .about-image img{
+        width:100%;
+        max-width:700px;
+        max-height:440px;
+        object-fit:cover;
+    }
+}
+
+/* Use more of the available screen width on phones and tablets. */
+@media (max-width: 991.98px){
+    .navbar,
+    .hero-container,
+    .about-container,
+    .trusted-container,
+    .projects-container,
+    .portfolio-container,
+    .contact-container,
+    .footer-container{
+        width:96%;
+    }
+}
